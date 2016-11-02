@@ -1,4 +1,4 @@
-<li class="list-item" {{action 'toggleDone'}}>
-  {{item.text}}
-</li>
-<button {{action 'delete'}}>Delete</button>
+<span {{action 'toggleDone'}}>
+{{item.text}}
+</span>
+<button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
