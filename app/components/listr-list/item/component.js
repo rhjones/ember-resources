@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   listItemCompleted: Ember.computed.alias('item.done'),
   actions: {
     toggleDone () {
-      return this.toggleProperty('listItemCompleted');
+      return this.sendAction('toggleItemDone', this.get('item'));
     },
   },
 });
