@@ -6,7 +6,6 @@ export default ApplicationSerializer.extend({
   serialize(snapshot, options) {
     // switch from text to content on way out
     let json = this._super(...arguments);
-    console.log('json is', json);
     json.content = json.text;
     delete json.text;
     return json;
