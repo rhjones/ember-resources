@@ -19,7 +19,9 @@ export default Ember.Component.extend({
       return this.sendAction('deleteItem', item);
     },
     createItem() {
-      return this.sendAction('createItem', this.get('newItem'));
+      let data = this.get('newItem');
+      data.list = this.get('list');
+      return this.sendAction('createItem', data);
     },
   },
 });
