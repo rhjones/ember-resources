@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   classNameBindings: ['listDetailHidden'],
   listDetailHidden: false,
   newItem: {
-    content: null,
+    text: null,
     done: false,
   },
   actions: {
@@ -22,6 +22,7 @@ export default Ember.Component.extend({
       let data = this.get('newItem');
       data.list = this.get('list');
       return this.sendAction('createItem', data);
+      this.set('newItem.text', null);
     },
   },
 });
