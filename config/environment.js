@@ -51,7 +51,12 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     ENV.rootURL = '/ember-resources';
-    ENV.baseURL = '/ember-resources';
+    // this environment variable should match what's set above in ENV
+    // so: ENV.rootURL
+    // should also point to app's actual root URL on gh-pages
+    // which is username.github.io/repo-name
+    // so should be '/repo-name'
+    // ENV.baseURL = '/ember-resources';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://obscure-woodland-57256.herokuapp.com';
   }
