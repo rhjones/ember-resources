@@ -50,7 +50,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/';
+    ENV.baseURL = '/ember-resources';
     ENV.locationType = 'hash';
     ENV.apiHost = 'https://obscure-woodland-57256.herokuapp.com';
   }
